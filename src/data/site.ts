@@ -21,7 +21,7 @@ export const site = {
   linkedin: 'https://www.linkedin.com/in/segun-toviho-07657627a',
   linkedinHandle: 'Segun Toviho',
   cvUrl: '/Toviho-Segun-David-CV.pdf',
-  quote: "Good software doesn't just work — it solves a real problem for a real person.",
+  quote: "Good software doesn't just work, it solves a real problem for a real person.",
   quoteAttribution: 'how I approach every project',
   responseTime: 'I usually respond within 24 hours.',
   url: 'https://my-portfolio-tqxt.vercel.app',
