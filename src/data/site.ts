@@ -66,6 +66,8 @@ export const skills: Skill[] = [
   { name: 'Express', group: 'Backend' },
   { name: 'Python', group: 'Backend' },
   { name: 'Flask', group: 'Backend' },
+  { name: 'PHP', group: 'Backend' },
+  { name: 'TensorFlow', group: 'Backend' },
   { name: 'C#', group: 'Backend' },
   { name: 'REST APIs', group: 'Backend' },
   { name: 'MongoDB', group: 'Data' },
@@ -104,18 +106,18 @@ export const stats: SiteStats[] = [
 ];
 
 export const profile = {
-  degree: 'B.Sc Computer Science (Final Year)',
+  degree: 'B.Sc Computer Science',
   university: 'Lagos State University',
   focus: 'Full-Stack Development & AI',
-  interests: 'Machine Learning · System Design · Automation',
+  interests: 'Machine Learning · System Design · Automation · Web',
   status: 'Open to work',
   paragraphs: [
-    'I am a final-year Computer Science student at Lagos State University and a Software Developer with a strong interest in using technology to solve real-world problems. I work across the stack — from crafting clean, responsive frontends to designing reliable backends, APIs and database systems.',
-    "As an AI enthusiast, I enjoy bringing machine learning into practical products — like an AI-powered course recommendation system that helps secondary school students choose the right university courses. I have also built management systems, payroll software, e-commerce platforms, streaming services and finance tools used in academic and real-world settings.",
+    'I am a graduate from Computer Science Department at Lagos State University and a Software Developer with a strong interest in using technology to solve real-world problems. I work across the stack  from crafting clean, responsive frontends to designing reliable backends, APIs and database systems.',
+    "As an AI enthusiast, I enjoy bringing machine learning into practical products  like an AI-powered course recommendation system that helps secondary school students choose the right university courses. I have also built management systems, payroll software, e-commerce platforms, streaming services and finance tools used in academic and real-world settings.",
     'Whether it is a web application, a desktop system or an intelligent API, my goal is always the same: deliver software that is useful, dependable and beautifully engineered.',
   ],
   currentlyLearning:
-    'Machine learning model deployment, system design and cloud infrastructure — pushing my projects from "it works" to "it scales".',
+    'Machine learning model deployment, system design and cloud infrastructure. Pushing my projects from "it works" to "it scales".',
 } as const;
 
 export const experience: TimelineItem[] = [
@@ -150,7 +152,7 @@ export const education: TimelineItem[] = [
   {
     title: 'B.Sc Computer Science',
     organisation: 'Lagos State University',
-    period: 'Final Year',
+    period: 'Completed',
     points: [
       'Strong foundation in software engineering, data structures, databases and machine learning',
       'Applying classroom knowledge by building and shipping real applications',
