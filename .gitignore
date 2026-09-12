@@ -28,3 +28,6 @@ dist-ssr
 .env.local
 .env.*.local
 .vercel
+
+# generated API bundle (built on Vercel during `vercel build`)
+api/_app.cjs

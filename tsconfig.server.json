@@ -21,7 +21,6 @@
   },
   "include": [
     "server",
-    "api",
     "shared/types.ts"
   ]
 }
