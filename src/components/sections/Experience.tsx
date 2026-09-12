@@ -23,7 +23,7 @@ export default function Experience() {
             >
               <span className="eyebrow">Currently deepening</span>
               <p>
-                Machine learning model deployment, system design and cloud infrastructure — pushing
+                Machine learning model deployment, system design and cloud infrastructure pushing
                 my projects from &ldquo;it works&rdquo; to &ldquo;it scales&rdquo;.
               </p>
             </motion.div>
