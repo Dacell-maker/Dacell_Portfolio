@@ -115,7 +115,7 @@ export default function Contact() {
               <span className="contact__accent">Let&rsquo;s build something people remember.</span>
             </>
           }
-          lede="An opportunity, a product idea, or just a hello — my inbox is always open."
+          lede="An opportunity, a product idea, or just a hello, my inbox is always open."
         />
 
         <div className="contact__grid">
