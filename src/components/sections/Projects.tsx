@@ -23,7 +23,7 @@ export default function Projects() {
         <SectionHead
           eyebrow="Selected work"
           title={<>Featured projects</>}
-          lede="A selection of applications I have designed, built and shipped — from AI-powered platforms and e-commerce stores to desktop business systems."
+          lede="A selection of applications I have designed, built and shipped from AI-powered platforms and e-commerce stores to desktop business systems."
           aside={
             <motion.div
               className="projects__meta"
