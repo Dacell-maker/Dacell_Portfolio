@@ -170,6 +170,12 @@
   color: #ffb4b4;
 }
 
+.field__hint code {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  color: var(--accent);
+}
+
 .login__loading {
   color: var(--text-dim);
   font-family: var(--font-mono);

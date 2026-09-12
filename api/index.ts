@@ -1,8 +1,16 @@
 /**
  * Vercel serverless entry point.
- * Every /api/* request is handled by the same Express app used in development.
+ *
+ * Vercel invokes the DEFAULT export as the request handler, and an Express app
+ * is exactly such a handler: (req, res) => void. Every /api/* request is routed
+ * here by the rewrite in vercel.json.
  */
-export { app } from '../server/app.ts';
+import { app } from '../server/app';
+
+export default app;
+export { app };
+
 export const config = {
+  runtime: 'nodejs20.x',
   maxDuration: 30,
 };

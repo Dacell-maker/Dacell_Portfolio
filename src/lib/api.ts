@@ -72,7 +72,22 @@ async function request<T>(path: string, options: Options = {}): Promise<T> {
   }
 
   const text = await response.text();
-  const payload = text ? (JSON.parse(text) as unknown) : null;
+
+  let payload: unknown = null;
+  if (text) {
+    try {
+      payload = JSON.parse(text);
+    } catch {
+      // HTML instead of JSON almost always means the /api serverless function
+      // is missing or misrouted on the deployment (e.g. Vercel's 404 page).
+      throw new ApiError(
+        `The API answered with a web page instead of JSON (status ${response.status}). ` +
+          'On Vercel this means the /api function is not deployed or the environment ' +
+          'variables are missing — redeploy after checking vercel.json and env vars.',
+        response.status,
+      );
+    }
+  }
 
   if (!response.ok) {
     const message =

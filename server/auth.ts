@@ -1,5 +1,5 @@
 import { createHmac, randomBytes, scryptSync, timingSafeEqual } from 'node:crypto';
-import { config } from './config.ts';
+import { config } from './config';
 
 /* ---------------------------------------------------------------- passwords */
 

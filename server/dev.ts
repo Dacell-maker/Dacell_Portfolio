@@ -1,6 +1,6 @@
-import { app } from './app.ts';
-import { config } from './config.ts';
-import { isDatabaseReady } from './db.ts';
+import { app } from './app';
+import { config } from './config';
+import { isDatabaseReady } from './db';
 
 async function start() {
   const database = await isDatabaseReady();

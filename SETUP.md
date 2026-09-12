@@ -71,8 +71,16 @@ After changing env vars: restart `npm run dev` locally, and redeploy on Vercel
 
 1. Visit `https://<your-domain>/admin` (or `/admin/login`).
 2. Because no admin exists yet, you'll see **“Create your admin account”**.
-3. Fill in name, email, a password of 8+ characters, and the `SETUP_TOKEN` value.
-4. Submit → you're signed in and the dashboard opens.
+3. Fill in name, email, and a password of 8+ characters.
+4. **Setup token:** this is the `SETUP_TOKEN` value from your server environment —
+   *not* something you make up:
+   - **Local (`npm run dev`):** open `.env.local` in the project root. A fresh copy of
+     this repo ships with `SETUP_TOKEN=local-setup-token`, so type exactly
+     `local-setup-token` (no quotes, no spaces). If your `.env.local` is missing,
+     copy `.env.example` to `.env.local`, set the value, and **restart `npm run dev`**
+     (env vars are only read when the server starts).
+   - **Vercel:** whatever you entered in Settings → Environment Variables, then redeploy.
+5. Submit → you're signed in and the dashboard opens.
 
 The endpoint refuses to run a second time, so nobody else can create an admin.
 After this, **rotate or remove `SETUP_TOKEN`** in your env vars for extra safety
@@ -164,6 +172,8 @@ in `src/components/sections/Contact.tsx` if you'd rather not ship a CV.
 | “Authentication is not configured” | `JWT_SECRET` missing. |
 | Upload warns “stored inline” | Add `BLOB_READ_WRITE_TOKEN`. |
 | Admin works locally but not on Vercel | Env vars were added after the last deploy — redeploy. |
+| Login shows “answered with a web page instead of JSON” | The `/api` serverless function isn't routed. Make sure `vercel.json` (with the `/api/:path*` rewrite) and `api/index.ts` (default export) are in the repo, then redeploy. Check Vercel → Deployments → Functions to confirm `api/index` exists. |
+| “Create your admin account” appears on Vercel after it existed locally | Correct and expected: the local dev admin lives in the throwaway in-memory store. The real admin lives in Atlas — create it once (anywhere) and the same login works on Vercel *and* locally, as long as both use the same `MONGODB_URI`. |
 | Forgot admin password | Delete the doc in Atlas `users`, then recreate via `/admin/login` with `SETUP_TOKEN`. |
 
 ## Security notes

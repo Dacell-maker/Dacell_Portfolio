@@ -1,17 +1,17 @@
 import express from 'express';
 import type { NextFunction, Request, RequestHandler, Response } from 'express';
 import { ObjectId } from 'mongodb';
-import type { Project } from '../shared/types.ts';
-import { seedProjects } from '../shared/seed.ts';
-import { config, hasBlob, hasDatabase, isMemoryDb } from './config.ts';
-import { hashPassword, signToken, verifyPassword, verifyToken } from './auth.ts';
+import type { Project } from '../shared/types';
+import { seedProjects } from '../shared/seed';
+import { config, hasBlob, hasDatabase, isMemoryDb } from './config';
+import { hashPassword, signToken, verifyPassword, verifyToken } from './auth';
 import {
   ensureIndexes,
   isDatabaseReady,
   projectsStore,
   serializeProject,
   usersStore,
-} from './db.ts';
+} from './db';
 
 
 /* ------------------------------------------------------------------ helpers */

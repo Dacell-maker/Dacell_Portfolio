@@ -176,7 +176,12 @@ export default function AdminLogin() {
                   required
                 />
                 <span className="field__hint">
-                  One-time token from your environment variables. It cannot be used twice.
+                  This is the <code>SETUP_TOKEN</code> value from your server environment — not a
+                  password you invent. Running locally? Open <code>.env.local</code> in the project
+                  root: a fresh copy of this repo ships with{' '}
+                  <code>SETUP_TOKEN=local-setup-token</code>. On Vercel it is whatever you set in
+                  Settings → Environment Variables. It can only be used once, and the dev server
+                  must be restarted after you change it.
                 </span>
               </div>
             ) : null}

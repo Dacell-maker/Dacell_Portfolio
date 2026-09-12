@@ -1,8 +1,8 @@
 import { MongoClient } from 'mongodb';
 import type { Db } from 'mongodb';
-import type { Project } from '../shared/types.ts';
-import { config, hasDatabase, isMemoryDb } from './config.ts';
-import { memoryProjects, memoryUsers } from './memory-db.ts';
+import type { Project } from '../shared/types';
+import { config, hasDatabase, isMemoryDb } from './config';
+import { memoryProjects, memoryUsers } from './memory-db';
 
 /**
  * One cached client. Serverless invocations reuse it while the container is

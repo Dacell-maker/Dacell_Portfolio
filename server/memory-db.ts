@@ -1,4 +1,4 @@
-import type { Project } from '../shared/types.ts';
+import type { Project } from '../shared/types';
 
 /**
  * Minimal in-memory stand-in for the MongoDB collections.
