@@ -142,7 +142,7 @@ function Dial() {
         aria-hidden="true"
       >
         <defs>
-          <path id="dial-path" d="M100,100 m-74,0 a74,74 0 1,1 148,0 a74,74 0 1,1 -148,0" />
+          <path id="dial-path" d="M150,150 m-74,0 a74,74 0 1,1 148,0 a74,74 0 1,1 -148,0" />
         </defs>
         <text className="dial__text">
           <textPath href="#dial-path" startOffset="0">
