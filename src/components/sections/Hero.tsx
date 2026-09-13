@@ -146,7 +146,7 @@ function Dial() {
         </defs>
         <text className="dial__text">
           <textPath href="#dial-path" startOffset="0">
-            SOFTWARE DEVELOPER · FULL-STACK · REACT · TYPESCRIPT · LAGOS ·
+            SOFTWARE DEVELOPER · FULL-STACK · AI · WEB APP · SOLUTION · LAGOS ·
           </textPath>
         </text>
       </motion.svg>
