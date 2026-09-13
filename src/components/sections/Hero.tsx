@@ -64,7 +64,7 @@ export default function Hero() {
           </h1>
 
           <motion.p className="hero__lede" variants={item}>
-            I&rsquo;m {site.name} — a full-stack developer in {site.location}. I build modern
+            I&rsquo;m {site.name} a full-stack developer in {site.location}. I build modern
             websites, web applications, e-commerce platforms and business systems for real products
             and real users.
           </motion.p>
